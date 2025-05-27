@@ -341,8 +341,8 @@ export default function ServiceDetailPage({ params }: { params: Promise<{ id: st
             <div className="col-md-6 service-image-column">
               <Image src={service.image} alt={service.title} width={500} height={300} className="service-image" />
               <div className="service-sidebar">
-                <h3>Besoin d'aide ?</h3>
-                <p>Contacte-nous pour plus d'informations sur ce service.</p>
+                <h3>Besoin d&apos;aide ?</h3>
+                <p>Contacte-nous pour plus d&apos;informations sur ce service.</p>
                 <Link href="/contact" className="btn-contact">Contactez-nous</Link>
               </div>
             </div>
