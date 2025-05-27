@@ -1,0 +1,56 @@
+/* ----- Importation des polices ----- */
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,600,700,900');
+@import url('https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,500i,700,700i');
+
+/* Dans globals.css */
+@import url('../styles/style.css');
+@import url('../styles/animate.css');
+@import url('../styles/bootstrap.css');
+@import url('../styles/bootstrap-reboot.css');
+@import url('../styles/bootstrap-grid.css');
+@import url('../styles/owl-carousel.css');
+@import url('../styles/colors1.css');
+@import url('../styles/colors2.css');
+@import url('../styles/colors3.css');
+@import url('../styles/dark-layout.css');
+@import url('../styles/font-awesome.css');
+@import url('../styles/font-awesome.min.css');
+@import url('../styles/hizoom.css');
+@import url('../styles/owl-theme.default.css');
+@import url('../styles/responsive.css');
+@import url('../styles/style.css');
+
+@import 'swiper/css';
+@import 'swiper/css/navigation';
+@import 'swiper/css/pagination';
+
+/* ----- Styles de base ----- */
+body {
+  background-color: #FBFBFF;
+  font-family: 'Source Sans Pro', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Exemples d'autres styles de base */
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+

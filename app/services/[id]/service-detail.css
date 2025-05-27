@@ -1,0 +1,263 @@
+.service-detail-section {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.content-section .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.service-image-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.service-image {
+  border-radius: 12px;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  margin-bottom: 20px;
+}
+
+.service-sidebar {
+  background-color: #ffffff;
+  padding: 20px 24px;
+  border-left: 4px solid #007bff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  width: 100%;
+}
+
+.service-description {
+  flex: 1;
+}
+
+.service-description h1 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.main-description {
+  font-size: 16.5px;
+  margin-bottom: 25px;
+  color: #444;
+  line-height: 1.7;
+}
+
+.service-section {
+  margin-bottom: 20px;
+}
+
+.service-section h4 {
+  font-size: 18px;
+  color: #007bff;
+  margin-bottom: 8px;
+}
+
+.service-section p {
+  font-size: 15.5px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.btn-contact,
+.btn-products,
+.btn-view {
+  display: inline-block;
+  padding: 10px 22px;
+  margin-top: 15px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.3s, transform 0.2s;
+  font-weight: 500;
+}
+
+.btn-contact:hover,
+.btn-products:hover,
+.btn-view:hover {
+  background-color: #c7e2ff;
+  transform: translateY(-2px);
+}
+
+.service-suggestions {
+  margin-top: 60px;
+}
+
+.service-suggestions h2 {
+  font-size: 24px;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.suggestion-item {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s;
+}
+
+.suggestion-item:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.suggestion-item h3 {
+  font-size: 18px;
+  margin: 15px 0 10px;
+  color: #333;
+}
+
+.suggestion-item p {
+  font-size: 15px;
+  color: #555;
+}
+
+.divider {
+  border: none;
+  height: 1px;
+  background-color: #ccc;
+  margin: 30px 0;
+}
+
+.section-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 25px;
+}
+
+/* Ligne animée */
+.animated-divider {
+  position: relative;
+  height: 3px;
+  border: none;
+  background: linear-gradient(90deg, #007bff, #00bfff);
+  margin: 25px 0 10px;
+  animation: slideIn 2s ease forwards;
+  width: 0%;
+}
+
+@keyframes slideIn {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.detail-title {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 25px;
+  font-size: 22px;
+  color: #333;
+}
+
+.line-animated {
+  height: 4px;
+  width: 100px;
+  background-color: #007bff;
+  margin: 30px auto 10px;
+  border-radius: 4px;
+  animation: slideIn 1s ease-in-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+  to {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+
+/* Ligne animée simple */
+.animated-line {
+  height: 4px;
+  background: linear-gradient(to right, #4043e3, #2261b4, #94b7d7);
+  background-size: 600% 600%;
+  animation: gradientAnimation 10s ease infinite;
+  margin: 30px 0;
+  border-radius: 4px;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Section produits */
+.associated-products {
+  text-align: center;
+}
+
+.associated-products h2 {
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.product-row {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.product-item {
+  width: 300px;
+  text-align: center;
+}
+
+.product-item h3 {
+  margin-top: 15px;
+  font-size: 18px;
+}
+
+.product-item p {
+  font-size: 14px;
+  color: #555;
+}
+
+.product-button-container {
+  margin-top: 20px;
+}
+
+.btn-products {
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn-products:hover {
+  background-color: #0056b3;
+}
+

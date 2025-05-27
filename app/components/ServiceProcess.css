@@ -1,0 +1,58 @@
+.service-process {
+  padding: 60px 20px;
+  background-color: #f5f7fa;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-header h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.section-header p {
+  font-size: 16px;
+  color: #666;
+}
+
+.steps {
+  display: flex;
+  flex-wrap: nowrap; /* Ne jamais casser la ligne */
+  justify-content: flex-start;
+  gap: 30px;
+  overflow-x: auto; /* Scroll horizontal si nécessaire */
+  padding-bottom: 20px;
+}
+
+.steps::-webkit-scrollbar {
+  height: 8px;
+}
+
+.steps::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+.step {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 30px 20px;
+  width: 250px; /* Fixe */
+  text-align: center;
+  border-radius: 10px;
+  position: relative;
+  transition: 0.3s;
+  flex: 0 0 auto; /* Ne pas se réduire */
+}
+
+.step:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+}
+
+.icon {
+  margin-bottom: 15px;
+}

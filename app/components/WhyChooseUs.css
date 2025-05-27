@@ -1,0 +1,58 @@
+.why-choose-us {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-header h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.section-header p {
+  font-size: 16px;
+  color: #666;
+  font-family: 'open sans', sans-serif;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  padding: 30px 20px;
+  width: 300px; /* Taille fixe pour chaque carte */
+  text-align: center;
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+}
+
+.card img {
+  margin-bottom: 20px;
+}
+
+.card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 14px;
+  color: #555;
+}

@@ -1,0 +1,84 @@
+.services-page {
+  font-family: 'Poppins', sans-serif;
+}
+
+.services-hero {
+  background: linear-gradient(270deg, #007bff, #00c6ff);
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.services-title {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.services-subtitle {
+  font-size: 18px;
+}
+
+.services-zigzag {
+  background-color: #f9f9f9;
+  padding: 60px 20px;
+}
+
+.zigzag-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 60px;
+  flex-wrap: wrap;
+}
+
+.zigzag-row.reverse {
+  flex-direction: row-reverse;
+}
+
+.zigzag-image {
+  flex: 1;
+  min-width: 300px;
+}
+
+.zigzag-image img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.zigzag-content {
+  flex: 1;
+  min-width: 300px;
+}
+
+.zigzag-content h3 {
+  font-size: 24px;
+  color: #007bff;
+  margin-bottom: 15px;
+}
+
+.zigzag-content p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.service-button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.service-button:hover {
+  background-color: #0056b3;
+}

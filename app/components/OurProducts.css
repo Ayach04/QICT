@@ -1,0 +1,48 @@
+.our-products {
+    padding: 60px 0;
+  }
+  
+  .product_list {
+    border: 1px solid #eee;
+    padding: 20px;
+    margin-bottom: 30px;
+    background: #fff;
+    border-radius: 5px;
+    transition: 0.3s;
+  }
+  
+  .product_list:hover {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .product_img img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+  }
+  
+  .starratin i {
+    color: gold;
+    margin: 0 2px;
+  }
+  
+  .product_price .old_price {
+    text-decoration: line-through;
+    color: #999;
+  }
+  
+  .product_price .new_price {
+    color: #e91e63;
+    font-weight: bold;
+    margin-left: 5px;
+  }
+  
+  .text_align_center {
+    text-align: center;
+  }
+
+  .main_heading h2 {
+    color: #000; /* noir */
+  }
+  
+  

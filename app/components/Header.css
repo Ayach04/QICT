@@ -1,0 +1,114 @@
+header {
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+}
+
+.top-bar {
+  background: linear-gradient(to right, #4043e3, #2261b4, #94b7d7);
+  background-size: 600% 600%;
+  animation: gradientAnimation 10s ease infinite;
+  color: #fff;
+  padding: 0px;
+  font-size: 14px;
+  font-family: 'georgia', serif;
+}
+
+.top-bar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact-info span {
+  margin-right: 20px;
+}
+
+.social-icons a img {
+  width: 20px;
+  margin-left: 20px;
+}
+
+.main-nav {
+  display: flex;
+  background: linear-gradient(to left, #4043e3, #2261b4, #94b7d7);
+  background-size: 600% 600%;
+  animation: gradientAnimation 10s ease infinite;
+  border-bottom: 0px solid #eee;
+  padding: 1px 0;
+}
+
+.main-nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: -10px 0;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  gap: 30px;
+  height: 70px;
+}
+
+.nav-links li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  align-items: center;
+  border-radius: 8px;
+  transition: 0.3s ease-in-out;
+}
+
+.nav-links li a:hover {
+  color: #524242;
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Animation Gradient */
+.header {
+  background: linear-gradient(270deg, #2528ef, #2261b4, #94b7d7);
+  background-size: 600% 600%;
+  animation: gradientAnimation 8s ease infinite;
+  color: white;
+}
+
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.logo img,
+.logo-image {
+  width: 100px;
+  height: auto;
+  object-fit: cover;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.btn-rdv {
+  background-color:transparent;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.btn-rdv:hover {
+  background-color: #2261b4;
+  color: #fff;
+  border-color: #fff;
+  transform: translateY(-3px);
+}
