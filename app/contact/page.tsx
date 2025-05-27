@@ -2,6 +2,8 @@
 
 import React from 'react';
 import './contact.css';
+import Image from 'next/image';
+
 
 export default function ContactPage() {
   return (
@@ -23,7 +25,9 @@ export default function ContactPage() {
 
         {/* Image + Infos pratiques à droite */}
         <div className="contact-info-simple">
-          <img
+          <Image
+            width={500}
+            height={300}
             src="/images/contact/bgcontactt.png"
             alt="QICT Building"
             className="contact-image"
@@ -33,7 +37,7 @@ export default function ContactPage() {
           <p><strong>Adresse :</strong> 123 Rue QICT, Casablanca, Maroc</p>
           <p><strong>Email :</strong> contact@qict.ma</p>
           <p><strong>Téléphone :</strong> +212 522-327680 / +212 681-677719</p>
-          <p><strong>Heures d'ouverture :</strong> Lun - Ven : 8h30 - 18h00</p>
+          <p><strong>Heures d&apos;ouverture :</strong> Lun - Ven : 8h30 - 18h00</p>
         </div>
       </div>
     </section>

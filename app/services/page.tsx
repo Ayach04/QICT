@@ -3,6 +3,8 @@
 import Link from 'next/link';
 import './services.css';
 import React from 'react';
+import Image from 'next/image';
+
 
 const services = [
   {
@@ -90,7 +92,7 @@ const services = [
     <div className="services-grid">
       {services.map((service) => (
         <div key={service.id} className="service-card">
-          <img src={service.image} alt={service.title} className="service-image" />
+          <Image src={service.image} alt={service.title} className="service-image" width={500} height={300} />
           <h3 className="service-title">{service.title}</h3>
           <p className="service-short-description">{service.shortDescription}</p>
           <Link href={`/services/${service.id}`}>

@@ -2,6 +2,7 @@
 
 import React from 'react';
 import './OurProducts.css';
+import Image from 'next/image';
 
 const products = [
   {
@@ -70,7 +71,7 @@ export default function OurProducts() {
             <div className="col-lg-3 col-md-6 col-sm-6 col-xs-12" key={index}>
               <div className="product_list">
                 <div className="product_img">
-                  <img src={product.image} alt={product.title} className="img-responsive" />
+                  <Image src={product.image} alt={product.title} className="img-responsive" width={500} height={300} />
                 </div>
                 <div className="product_detail_btm text_align_center">
                   <h4>{product.title}</h4>

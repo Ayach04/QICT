@@ -16,13 +16,13 @@ export default function WhyChooseUs() {
           <div className="card">
             <Image src="/images/it_service/si4.png" alt="Optimisation des coûts" width={80} height={80} />
             <h3>Optimisation des Coûts</h3>
-            <p>Réduisez vos dépenses IT en valorisant l'usage et en renégociant avec vos fournisseurs.</p>
+            <p>Réduisez vos dépenses IT en valorisant l&apos;usage et en renégociant avec vos fournisseurs.</p>
           </div>
 
           <div className="card">
             <Image src="/images/it_service/si3.png" alt="Solutions sur mesure" width={80} height={80} />
             <h3>Solutions sur Mesure</h3>
-            <p>Adaptez vos outils informatiques à l'évolution de vos métiers et gagnez en efficacité.</p>
+            <p>Adaptez vos outils informatiques à l&apos;évolution de vos métiers et gagnez en efficacité.</p>
           </div>
 
           <div className="card">

@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import './Services.css';
 import React from 'react';
+import Image from 'next/image';
 
 const services = [
     {
@@ -103,7 +104,7 @@ export default function Services() {
               className={`zigzag-row ${index % 2 !== 0 ? 'reverse' : ''}`}
             >
               <div className="zigzag-image">
-                <img src={service.image} alt={service.title} />
+                <Image src={service.image} alt={service.title} width={500} height={300} />
               </div>
               <div className="zigzag-content">
                 <h3>{service.title}</h3>

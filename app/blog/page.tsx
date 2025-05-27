@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import './blog.css';
 
 type BlogPost = {
@@ -40,7 +41,7 @@ export default function BlogPage() {
         {blogPosts.map((post) => (
           <Link key={post.slug} href={`/blog/${post.slug}`} className="card">
             <div className="card-image">
-              <img src={post.image} alt={post.title} />
+              <Image src={post.image} alt={post.title} width={500} height={300} />
             </div>
             <div className="card-content">
               <h3>{post.title}</h3>
