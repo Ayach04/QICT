@@ -1,15 +1,6 @@
-'use client';
-
 import { notFound } from 'next/navigation';
 
-type BlogData = {
-  [slug: string]: {
-    title: string;
-    content: string;
-  };
-};
-
-const blogData: BlogData = {
+const blogData: Record<string, { title: string; content: string }> = {
   'videosurveillance-intelligente': {
     title: 'Vidéosurveillance intelligente pour votre entreprise',
     content: 'Voici comment QICT vous accompagne avec l’IA dans la sécurité...',
@@ -28,11 +19,7 @@ const blogData: BlogData = {
   },
 };
 
-export default function BlogDetail({
-  params,
-}: {
-  params: { slug: string };
-}) {
+export default function Page({ params }: { params: { slug: string } }) {
   const post = blogData[params.slug];
 
   if (!post) return notFound();
