@@ -21,7 +21,7 @@ export default function RendezVousPage() {
                   <input type='hidden' name='zc_gad' id='zc_gad' value=''>
                   <input type='text' style='display:none;' name='xmIwtLD' value='c09206f670f3ac5d9d26ce9583df70d8b919b1866d3e0714d4ccb099fa385db10bd704a38e9293e44db5fdc512a4025f'>
                   <input type='text' style='display:none;' name='actionType' value='TGVhZHM='>
-                  <input type='text' style='display:none;' name='returnURL' value='null'>
+                  <input type='text' style='display:none;' name='returnURL' value='https://qict.ma/merci'>
 
                   <div class='zcwf_row'><label for='Last_Name'>Nom Complet<span style='color:red;'>*</span></label><input type='text' id='Last_Name' name='Last Name' maxlength='80'></div>
                   <div class='zcwf_row'><label for='Email'>E-mail<span style='color:red;'>*</span></label><input type='text' ftype='email' id='Email' name='Email' maxlength='100'></div>
@@ -44,16 +44,17 @@ export default function RendezVousPage() {
                       <option value='fourniture'>Fournitures de Bureau</option>
                     </select>
                   </div>
-                  <label>Date<span style={{ color: 'red' }}>*</span></label>
-              <input type='date' name='Date' required />
 
-              <label>Heure<span style={{ color: 'red' }}>*</span></label>
-              <input type='time' name='State' required />
+                  <div class='zcwf_row'><label for='Date'>Date<span style='color:red;'>*</span></label><input type='date' id='Date' name='Date' required></div>
+                  <div class='zcwf_row'><label for='State'>Heure<span style='color:red;'>*</span></label><input type='time' id='State' name='State' required></div>
+                  
+                  <div class='zcwf_row'>
+                    <label for='Description'>Message<span style='color:red;'>*</span></label>
+                    <textarea id='Description' name='Description' maxlength='1000' rows='6' style='width: 100%;'></textarea>
+                  </div>
 
-              <label>Message<span style={{ color: 'red' }}>*</span></label>
-              <textarea name='Description' required></textarea>
-
-              <button type='submit' className='formsubmit zcwf_button'>Envoyer la demande</button>
+                  <div class='zcwf_row'>
+                    <input type='submit' id='formsubmit' class='formsubmit zcwf_button' value='Envoyer la demande'>
                   </div>
                 </form>
               </div>

@@ -28,13 +28,11 @@ const blogData: BlogData = {
   },
 };
 
-interface BlogDetailProps {
-  params: {
-    slug: string;
-  };
-}
-
-export default function BlogDetail({ params }: BlogDetailProps) {
+export default function BlogDetail({
+  params,
+}: {
+  params: { slug: string };
+}) {
   const post = blogData[params.slug];
 
   if (!post) return notFound();
