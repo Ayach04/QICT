@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 
-const blogData = {
+const blogData: Record<string, { title: string; content: string }> = {
   'videosurveillance-intelligente': {
     title: 'Vidéosurveillance intelligente pour votre entreprise',
     content: 'Voici comment QICT vous accompagne avec l’IA dans la sécurité...',
@@ -17,15 +17,13 @@ const blogData = {
     title: 'Pourquoi externaliser la gestion de votre IT ?',
     content: 'L’infogérance permet à votre entreprise de se concentrer...',
   },
-} as const;
-
-type Props = {
-  params: {
-    slug: keyof typeof blogData;
-  };
 };
 
-export default async function BlogDetail({ params }: Props) {
+export async function generateStaticParams() {
+  return Object.keys(blogData).map((slug) => ({ slug }));
+}
+
+export default function BlogDetail({ params }: { params: { slug: string } }) {
   const post = blogData[params.slug];
 
   if (!post) return notFound();
