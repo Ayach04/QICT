@@ -23,7 +23,7 @@ export async function generateStaticParams() {
   return Object.keys(blogData).map((slug) => ({ slug }));
 }
 
-export default function BlogDetail({ params }: { params: { slug: string } }) {
+export default async function BlogDetail({ params }: { params: { slug: string } }) {
   const post = blogData[params.slug];
 
   if (!post) return notFound();
