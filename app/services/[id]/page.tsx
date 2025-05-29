@@ -327,8 +327,8 @@ const serviceDetails: Record<string, {
   },
 };
 
-export default function ServiceDetailPage({ params }: { params: Promise<{ id: string }> }) {
-  const { id } = use(params);
+export default function ServiceDetailPage({ params }: { params: { id: string } }) {
+  const { id } = params;
   const service = serviceDetails[id];
 
   if (!service) return notFound();

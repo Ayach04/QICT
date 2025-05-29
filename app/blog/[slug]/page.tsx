@@ -1,3 +1,5 @@
+'use client';
+
 import { notFound } from 'next/navigation';
 
 const blogData = {
@@ -19,18 +21,20 @@ const blogData = {
   },
 } as const;
 
-type Params = {
-  slug: keyof typeof blogData;
-};
+type Slug = keyof typeof blogData;
 
+// ✅ Génération des routes statiques
 export function generateStaticParams() {
   return Object.keys(blogData).map((slug) => ({ slug }));
 }
 
-export default async function Page({ params }: { params: Params }) {
-  const post = blogData[params.slug];
+// ✅ Composant page
+export default function BlogDetailPage({ params }: { params: { slug: string } }) {
+  const post = blogData[params.slug as Slug];
 
-  if (!post) return notFound();
+  if (!post) {
+    return notFound();
+  }
 
   return (
     <div className="container" style={{ padding: '2rem' }}>
