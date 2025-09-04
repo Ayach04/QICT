@@ -70,7 +70,7 @@ header {
 
 /* Animation Gradient */
 .header {
-  background: linear-gradient(270deg, #2528ef, #2261b4, #94b7d7);
+  background: linear-gradient(270deg, #3166ee, #4779e5, #94b7d7);
   background-size: 600% 600%;
   animation: gradientAnimation 8s ease infinite;
   color: white;
@@ -84,8 +84,10 @@ header {
 
 .logo img,
 .logo-image {
-  width: 100px;
+  width: 140px;
   height: auto;
+  margin-top: -5px;   /* remonte un peu */
+  margin-bottom: -5px; 
   object-fit: cover;
 }
 

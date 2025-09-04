@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulaire Contact Zoho</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: transparent !important;
+        font-family: 'Poppins', sans-serif;
+      }
+
+      #crmWebToEntityForm {
+        background-color: transparent !important;
+        max-width: 100%;
+        padding: 0;
+        margin: 0;
+      }
+
+      .zcwf_row {
+        margin: 12px 0;
+      }
+
+      .zcwf_col_lab {
+        display: none !important;
+      }
+
+      .zcwf_col_fld input,
+      .zcwf_col_fld textarea {
+        width: 100% !important;
+        padding: 12px !important;
+        border-radius: 14px !important;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+      }
+
+      .zcwf_col_fld textarea {
+        resize: vertical;
+        min-height: 100px;
+      }
+
+      .zcwf_button,
+      .formsubmit.zcwf_button {
+        width: 100%;
+        background-color: #1a4fff !important;
+        color: white !important;
+        font-weight: bold;
+        font-size: 16px;
+        border: none;
+        border-radius: 14px;
+        padding: 12px;
+        cursor: pointer;
+        margin-top: 10px;
+      }
+
+      .zcwf_col_help,
+      .zcwf_privacy,
+      .zcwf_col_lab label,
+      input[type="reset"] {
+        display: none !important;
+      }
+
+      @media (max-width: 600px) {
+        .zcwf_col_fld input,
+        .zcwf_col_fld textarea {
+          font-size: 15px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="crmWebToEntityForm" class="zcwf_lblLeft crmWebToEntityForm">
+      <form
+        action="https://crm.zoho.com/crm/WebToContactForm"
+        name="WebToContacts6824445000000601021"
+        method="POST"
+        onSubmit='javascript:document.charset="UTF-8"; return checkMandatory6824445000000601021()'
+        accept-charset="UTF-8"
+        id="webform6824445000000601021"
+      >
+        <input type="text" style="display:none" name="xnQsjsdp" value="f58843583bbb9d3c60e04af28aa1212ae458f3151fbcb43bf35bc64783e6804a" />
+        <input type="hidden" name="zc_gad" id="zc_gad" value="" />
+        <input type="text" style="display:none" name="xmIwtLD" value="6f30b00a19fe2369de40ba221a57cc2a54d2814cd8fa5281c981783c380b41e2542dd354b5f6c03537601d30a1f5f578" />
+        <input type="text" style="display:none" name="actionType" value="Q29udGFjdHM=" />
+        <input type="text" style="display:none" name="returnURL" value="javascript:window.top.location.href='http://localhost:3000/merci';" />
+
+
+        <div class="zcwf_row">
+          <div class="zcwf_col_fld">
+            <input type="text" id="Last_Name" name="Last Name" placeholder="Nom" required maxlength="80" />
+          </div>
+        </div>
+
+        <div class="zcwf_row">
+          <div class="zcwf_col_fld">
+            <input type="text" id="First_Name" name="First Name" placeholder="Prénom" required maxlength="40" />
+          </div>
+        </div>
+
+        <div class="zcwf_row">
+          <div class="zcwf_col_fld">
+            <input type="email" id="Email" name="Email" placeholder="E-mail" required maxlength="100" />
+          </div>
+        </div>
+
+        <div class="zcwf_row">
+          <div class="zcwf_col_fld">
+            <input type="text" id="Title" name="Title" placeholder="Sujet" maxlength="100" />
+          </div>
+        </div>
+
+        <div class="zcwf_row">
+          <div class="zcwf_col_fld">
+            <textarea id="Description" name="Description" placeholder="Message" required></textarea>
+          </div>
+        </div>
+
+        <div class="zcwf_row">
+          <div class="zcwf_col_fld">
+            <input
+              type="submit"
+              class="formsubmit zcwf_button"
+              value="Envoyer"
+              title="Envoyer"
+            />
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <!-- Tracking Script -->
+    <script id="wf_anal" src="https://crm.zohopublic.com/crm/WebFormAnalyticsServeServlet?rid=4f7ff1e585460e453d163c87ba9084e7e4c7450fde8db73574db1524406c8101aea597febb33fac737e81e2403440f22gid33b00cf7bd359621e8f67bbb768b8de0debde8afa55b106f3ea1998b3184dfc8gid7cf364ec4a0ed4090fe677159c99d05d0dbff8ddcff153f940a79f0d2c45164fgid2194e0c7691ed6760894a2ed48d1a735b9b61a117c30898470b090e588827b5a&tw=cf62f1a23adb00292bdb0bfb2aeb0fa9d841a33bf08437e6ab1c9d9dde01ee18"></script>
+
+    <script>
+      function checkMandatory6824445000000601021() {
+        var mndFileds = ['First Name', 'Last Name', 'Email', 'Description'];
+        var fldLangVal = ['Prénom', 'Nom', 'E-mail', 'Message'];
+        for (i = 0; i < mndFileds.length; i++) {
+          var fieldObj = document.forms['WebToContacts6824445000000601021'][mndFileds[i]];
+          if (fieldObj) {
+            if ((fieldObj.value).trim() === '') {
+              alert(fldLangVal[i] + ' est requis.');
+              fieldObj.focus();
+              return false;
+            }
+          }
+        }
+        return true;
+      }
+    </script>
+  </body>
+</html>

@@ -33,7 +33,7 @@ export default function Header() {
           <div className="logo-section">
   <Link href="/" className="logo">
     <Image 
-      src="/images/logos/logo00.png" 
+      src="/images/logos/logo.png" 
       alt="Logo QICT"
       width={100}
       height={100}

@@ -3,7 +3,7 @@
 import React from 'react';
 import './contact.css';
 import Image from 'next/image';
-
+import ZohoContactFormEmbed from '@/app/components/ZohoContactFormEmbed';
 
 export default function ContactPage() {
   return (
@@ -13,14 +13,7 @@ export default function ContactPage() {
         {/* Formulaire à gauche */}
         <div className="contact-form card">
           <h2>Envoyez-nous un message</h2>
-          <form>
-            <input type="text" placeholder="Votre nom" required />
-            <input type="text" placeholder="Votre prénom" required />
-            <input type="email" placeholder="Votre email" required />
-            <input type="text" placeholder="Sujet" required />
-            <textarea rows={5} placeholder="Votre message" required></textarea>
-            <button type="submit">Envoyer</button>
-          </form>
+          <ZohoContactFormEmbed />
         </div>
 
         {/* Image + Infos pratiques à droite */}

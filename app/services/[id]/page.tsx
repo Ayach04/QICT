@@ -248,7 +248,7 @@ const serviceDetails: Record<string, {
   },
   'formation': {
     title: '🎓 Formation des utilisateurs',
-    image: '/images/services/formation1.jpg',
+    image: '/images/services/formation.jpg',
     description: 'Sensibilisation et accompagnement des utilisateurs finaux pour une prise en main efficace des solutions déployées.',
     sections: [
       {
@@ -294,7 +294,7 @@ const serviceDetails: Record<string, {
   },
   'developpement': {
     title: '🌐 Développement sur Mesure',
-    image: '/images/services/dev2.jpg',
+    image: '/images/services/dev1.jpg',
     description: 'Création de sites web personnalisés, parfaitement adaptés à vos besoins spécifiques, avec hébergement sécurisé et évolutif pour garantir des performances optimales.',
     sections: [
       {
@@ -327,8 +327,9 @@ const serviceDetails: Record<string, {
   },
 };
 
-export default function ServiceDetailPage({ params }: { params: { id: string } }) {
-  const { id } = params;
+
+export default function ServiceDetailPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = use(params); // ✅ déstructuration correcte
   const service = serviceDetails[id];
 
   if (!service) return notFound();
@@ -339,7 +340,13 @@ export default function ServiceDetailPage({ params }: { params: { id: string } }
         <div className="content-section">
           <div className="row">
             <div className="col-md-6 service-image-column">
-              <Image src={service.image} alt={service.title} width={500} height={300} className="service-image" />
+              <Image
+                src={service.image}
+                alt={service.title}
+                width={500}
+                height={300}
+                className="service-image"
+              />
               <div className="service-sidebar">
                 <h3>Besoin d&apos;aide ?</h3>
                 <p>Contacte-nous pour plus d&apos;informations sur ce service.</p>
@@ -351,9 +358,7 @@ export default function ServiceDetailPage({ params }: { params: { id: string } }
               <h1>{service.title}</h1>
               <p className="main-description">{service.description}</p>
 
-              {/* Première ligne animée */}
               <div className="animated-line"></div>
-
               <h3 className="section-title">Détails du service</h3>
 
               {service.sections?.map((section, index) => (
@@ -365,7 +370,6 @@ export default function ServiceDetailPage({ params }: { params: { id: string } }
             </div>
           </div>
 
-          {/* Deuxième ligne animée */}
           <div className="animated-line animated-line"></div>
 
           <div className="associated-products">
