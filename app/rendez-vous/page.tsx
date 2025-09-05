@@ -25,7 +25,8 @@ export default function RendezVousPage() {
               <input type="hidden" name="zc_gad" id="zc_gad" value="" />
               <input type="hidden" name="xmIwtLD" value="c09206f670f3ac5d9d26ce9583df70d8b919b1866d3e0714d4ccb099fa385db10bd704a38e9293e44db5fdc512a4025f" />
               <input type="hidden" name="actionType" value="TGVhZHM=" />
-              <input type="hidden" name="returnURL" value="https://localhost:3000/merci" />
+             <input type="hidden" name="returnURL" value="https://qict.vercel.app/merci" />
+
 
               <label>Nom complet</label>
               <input type="text" name="Last Name" placeholder="Entrez votre nom" required />
@@ -58,7 +59,7 @@ export default function RendezVousPage() {
               <input type="date" name="Date" required />
 
               <label>Heure</label>
-              <input type="time" name="State" required />
+              <input type="time" name="Time" required />
 
               <label>Message</label>
               <textarea name="Description" placeholder="Décrivez votre besoin..." rows={4} required></textarea>
