@@ -2,7 +2,9 @@
 
 import React, { useState } from 'react';
 import './rendezvous.css';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import ZohoFormEmbed from '@/app/components/ZohoFormEmbed';
+
 
 export default function RendezVousPage() {
   const [formStatus, setFormStatus] = useState('');
@@ -25,7 +27,7 @@ export default function RendezVousPage() {
               <input type="hidden" name="zc_gad" id="zc_gad" value="" />
               <input type="hidden" name="xmIwtLD" value="c09206f670f3ac5d9d26ce9583df70d8b919b1866d3e0714d4ccb099fa385db10bd704a38e9293e44db5fdc512a4025f" />
               <input type="hidden" name="actionType" value="TGVhZHM=" />
-             <input type="hidden" name="returnURL" value="https://qict.vercel.app/merci" />
+              <input type="hidden" name="returnURL" value="https://qict.vercel.app/merci" />
 
 
               <label>Nom complet</label>
