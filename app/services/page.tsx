@@ -5,13 +5,13 @@ import './services.css';
 import React from 'react';
 import Image from 'next/image';
 
-
 const services = [
   {
     id: 'videosurveillance',
     image: '/images/services/surveillance1.jpg',
     title: 'Vidéosurveillance et Sécurité',
-    shortDescription: 'Nous installons des systèmes de vidéosurveillance intelligents adaptés à tous types d’environnements. Caméras IP ou analogiques, enregistrement sécurisé, alertes en temps réel. Surveillance à distance via smartphone ou PC. Idéal pour protéger vos locaux 24h/24.',
+    shortDescription:
+      'Nous installons des systèmes de vidéosurveillance intelligents adaptés à tous types d’environnements. Caméras IP ou analogiques, enregistrement sécurisé, alertes en temps réel. Surveillance à distance via smartphone ou PC. Idéal pour protéger vos locaux 24h/24.',
   },
   {
     id: 'pointage',
@@ -41,25 +41,29 @@ const services = [
     id: 'crm-erp',
     image: '/images/services/erpcrm.png',
     title: 'Conseil et implementation des systèmes de Gestion CRM/ERP',
-    shortDescription: 'Implémentation et gestion des CRM et ERP : Salesforce, Dolibarr, SAP, Hubspot, Odoo et tous les systèmes de gestion Opensource',
+    shortDescription:
+      'Implémentation et gestion des CRM et ERP : Salesforce, Dolibarr, SAP, Hubspot, Odoo et tous les systèmes de gestion Opensource',
   },
   {
     id: 'infogerance',
     image: '/images/services/infogerance1.jpg',
     title: 'Infogérance',
-    shortDescription: 'Nous gérons et optimisons votre parc informatique au quotidien pour vous garantir performance, sécurité et tranquillité d’esprit.',
+    shortDescription:
+      'Nous gérons et optimisons votre parc informatique au quotidien pour vous garantir performance, sécurité et tranquillité d’esprit.',
   },
   {
     id: 'telephonie',
     image: '/images/services/telephonie.jpg',
     title: 'Téléphonie IP(VoIP)',
-    shortDescription: 'Mise en place de solutions de téléphonie IP modernes pour remplacer ou compléter les systèmes téléphoniques traditionnels.',
+    shortDescription:
+      'Mise en place de solutions de téléphonie IP modernes pour remplacer ou compléter les systèmes téléphoniques traditionnels.',
   },
   {
     id: 'cloud',
     image: '/images/services/cloud1.jpeg',
     title: 'Solutions Cloud',
-    shortDescription: 'Nous vous proposons des solutions cloud sur mesure pour faciliter l’accès, le stockage et la gestion sécurisée de vos données.',
+    shortDescription:
+      'Nous vous proposons des solutions cloud sur mesure pour faciliter l’accès, le stockage et la gestion sécurisée de vos données.',
   },
   {
     id: 'developpement',
@@ -77,29 +81,41 @@ const services = [
     id: 'caisse',
     image: '/images/services/caisse.jpg',
     title: 'Vente et installation de caisses enregistreuses tactiles et logiciels de caisse',
-    shortDescription: 'Déploiement de solutions de point de vente (POS) clés en main adaptées aux besoins des commerces.',
+    shortDescription:
+      'Déploiement de solutions de point de vente (POS) clés en main adaptées aux besoins des commerces.',
   },
   {
     id: 'fournitures-bureau',
     image: '/images/services/bur1.png',
     title: 'Fournitures Bureau',
-    shortDescription: 'Nous vous aidons à équiper vos bureaux avec du matériel de qualité pour un environnement de travail efficace et professionnel.',
+    shortDescription:
+      'Nous vous aidons à équiper vos bureaux avec du matériel de qualité pour un environnement de travail efficace et professionnel.',
   },
 ];
 
-<section id="services" className="services-list">
-  <div className="container">
-    <div className="services-grid">
-      {services.map((service) => (
-        <div key={service.id} className="service-card">
-          <Image src={service.image} alt={service.title} className="service-image" width={500} height={300} />
-          <h3 className="service-title">{service.title}</h3>
-          <p className="service-short-description">{service.shortDescription}</p>
-          <Link href={`/services/${service.id}`}>
-            <button className="service-button">Voir le service</button>
-          </Link>
+export default function ServicesPage() {
+  return (
+    <section id="services" className="services-list">
+      <div className="container">
+        <div className="services-grid">
+          {services.map((service) => (
+            <div key={service.id} className="service-card">
+              <Image
+                src={service.image}
+                alt={service.title}
+                className="service-image"
+                width={500}
+                height={300}
+              />
+              <h3 className="service-title">{service.title}</h3>
+              <p className="service-short-description">{service.shortDescription}</p>
+              <Link href={`/services/${service.id}`}>
+                <button className="service-button">Voir le service</button>
+              </Link>
+            </div>
+          ))}
         </div>
-      ))}
-    </div>
-  </div>
-</section>
+      </div>
+    </section>
+  );
+}
