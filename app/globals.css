@@ -1,14 +1,10 @@
-/* ===============================
-   GLOBAL STYLES
-=============================== */
-
 /* ----- Importation des polices ----- */
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,600,700,900');
 @import url('https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
 @import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,500i,700,700i');
 
-/* ----- Importation des autres CSS ----- */
+/* Dans globals.css */
 @import url('../styles/style.css');
 @import url('../styles/animate.css');
 @import url('../styles/bootstrap.css');
@@ -23,8 +19,12 @@
 @import url('../styles/font-awesome.min.css');
 @import url('../styles/hizoom.css');
 @import url('../styles/owl-theme.default.css');
-@import url('../styles/responsive.css'); /* règles responsive à la fin */
-@import url('../styles/style.css'); /* éviter doublon si possible */
+@import url('../styles/responsive.css');
+@import url('../styles/style.css');
+
+@import 'swiper/css';
+@import 'swiper/css/navigation';
+@import 'swiper/css/pagination';
 
 /* ----- Styles de base ----- */
 body {
@@ -34,6 +34,7 @@ body {
   padding: 0;
 }
 
+/* Exemples d'autres styles de base */
 * {
   box-sizing: border-box;
 }
@@ -52,96 +53,4 @@ html {
   scroll-behavior: smooth;
 }
 
-/* ===============================
-   HEADER & FOOTER
-=============================== */
-header, footer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 30px;
-  background-color: #ffffff;
-}
 
-header nav, footer nav {
-  display: flex;
-  gap: 20px;
-}
-
-@media (max-width: 768px) {
-  header, footer {
-    flex-direction: column;
-    text-align: center;
-    padding: 10px;
-  }
-
-  header nav, footer nav {
-    flex-direction: column;
-    gap: 10px;
-  }
-}
-
-/* ===============================
-   NOS SERVICES
-=============================== */
-.services-container {
-  display: flex;          /* Flexbox */
-  flex-wrap: wrap;        /* passe à la ligne sur petit écran */
-  gap: 20px;              /* espace entre les cartes */
-  justify-content: center;
-  padding: 30px 15px;
-}
-
-.service-card {
-  flex: 1 1 300px;        /* largeur min 300px, flexible */
-  max-width: 400px;
-  padding: 15px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  border-radius: 8px;
-  background-color: #fff;
-  text-align: center;
-  transition: transform 0.3s;
-}
-
-.service-card:hover {
-  transform: translateY(-5px);
-}
-
-.service-card h3 {
-  margin-top: 15px;
-  font-size: 1.2rem;
-}
-
-/* ===============================
-   MEDIA QUERIES
-=============================== */
-
-/* Tablette */
-@media (max-width: 768px) {
-  .services-container {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .service-card {
-    padding: 12px;
-    font-size: 14px;
-  }
-}
-
-/* Mobile petit écran */
-@media (max-width: 480px) {
-  body {
-    font-size: 14px;
-  }
-
-  .service-card {
-    padding: 10px;
-    font-size: 13px;
-  }
-
-  header, footer {
-    padding: 8px 10px;
-  }
-}
