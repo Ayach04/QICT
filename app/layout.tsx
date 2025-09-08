@@ -1,5 +1,4 @@
 import '@/app/globals.css';
- // Chemin correct vers le CSS global
 import Header from './components/Header';
 import Footer from './components/Footer';
 import React from 'react';
@@ -18,7 +17,9 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <head>
-        {/* Les polices Google sont déjà dans globals.css, donc inutile ici */}
+        {/* Meta viewport pour rendre le site responsive */}
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        {/* Les polices Google sont déjà dans globals.css */}
       </head>
       <body>
         <Header />
